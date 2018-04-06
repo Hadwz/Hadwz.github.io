@@ -168,67 +168,9 @@
 <p>Angular和Vue的相似点有很多，我自己也从Angualr中借鉴了许多知识并应用到了Vue的实际工作中，比如Angular的Pipe、Service，还有它整个项目的架构设计，算是一个不错的收获。</p>
 <p>至于为什么会有Python，主要是自己的选题方面走了一些弯路，所以才会转向Python辅助，Node + Angular &amp;&amp; Ionic的解决方案</p>
 <p>但是呢，也算是再次重新复习了一下Python的一些基础知识，经过这些日子JS的洗礼，对于Python，我有了一些新的认识和理解。</p>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ul>
-<li>a标签的download：其实完全可以在href中链接，但是也可以使用download属性来指定，这依据个人情况</li>
-</ul>
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
-<li>模态框：详见 工作-1.12</li>
-<li>background-size: contain //使其高度和宽度完全适应内容区域</li>
-<li>background-size: cover //把背景图像扩展至足够大，以使背景图像完全覆盖背景区域</li>
-<li><p>:hover 选择器可用于所有元素，不只是链接。</p>
-<p>  :hover 必须位于 :link 和 :visited 之后（如果存在的话），这样样式才能生效。</p>
-</li>
-<li>word-break 属性规定自动换行的处理方法</li>
-</ul>
-<h2 id="Angular-amp-amp-Ionic"><a href="#Angular-amp-amp-Ionic" class="headerlink" title="Angular &amp;&amp; Ionic"></a>Angular &amp;&amp; Ionic</h2><ul>
-<li>Ionic基本操作：详见 日志-1.20、1.21、1.23</li>
-<li>Angular的几个特性：详见 工作-1.2</li>
-<li>属性绑定、输入属性、路由：详见 工作-1.8 </li>
-<li>Abstract class：指的是用关键字abstract修饰的类，叫做抽象类，是不允许实例化的类，不能直接创建对象，必须要通过子类创建才能使用abstract类的方法。</li>
-<li>安装bootstrp 和 jQuery: 详见 日志-1.7</li>
-<li>依赖注入：依赖注入是提供类的新实例的一种方式，还负责处理好类所需的全部依赖。Angular使用依赖注入来提供新组件以及组件所需的服务（详见上文的特性）</li>
-<li>Provider：提供依赖值的一个具体的、运行时的版本。注入器依靠提供商创建服务的实例，注入器再将服务的实例注入组件或其他服务</li>
-<li>@Inputs(输入属性)：可以在组件树中传递数据（父组件传给子组件）</li>
-<li>implements: 强制一个类去符合某个契约比如：</li>
-<li>interface：接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约</li>
-</ul>
-<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
-<li>在当前路由重新刷新页面：this.$router.go(0); 这种方法不是特别好，但是我也没找到更好的解决方案</li>
-</ul>
-<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><ul>
-<li>因为缩进的重要性，所以不可以被压缩，开源就很方便</li>
-<li>&amp; 按位与， &amp;&amp;逻辑与</li>
-<li>2 &amp; 3 //等同 0b10 &amp; 0b11 =&gt; 2 </li>
-<li>== 关系运算符比较的是值相等，is比较的是两个变量的身份(id(x)内存地址)是否相等</li>
-<li>ord(‘d’) == 100 查询ASCII码</li>
-<li>每个文件开头都应该有该文件的说明</li>
-<li>python不支持 ++ – 的自增自减运算符</li>
-<li>for循环  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//代表for(i=0; i&lt; 10; i++) </div><div class="line">for x in range(0, 10): //range第三个参数为步长，相当于i++</div><div class="line">    print(x)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="包、模块"><a href="#包、模块" class="headerlink" title="包、模块"></a>包、模块</h3><ul>
-<li>包：包相当于文件夹（文件夹内包含<strong>init</strong>.py，否则只相当于一个普通的文件夹）</li>
-<li>模块：模块就是包内的一个py文件，上文的init也是一个模块</li>
-<li>其他详见 日志-1.14</li>
-</ul>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
-<li><p>参数</p>
-<ol>
-<li>必须参数：必须放在前面，其他参数放在后面</li>
-<li><p>关键字参数：使函数不需要按照顺序传入，增加可读性（关键字参数也是属于必须参数）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">def add(x, y):</div><div class="line">   </div><div class="line">   result = x + y</div><div class="line">   return result</div><div class="line"></div><div class="line">//必须参数与关键字参数只在函数调用上有差异</div><div class="line">c = add(y=3, x=2)</div></pre></td></tr></table></figure>
-</li>
-<li><p>默认参数</p>
-</li>
-<li><p>可变参数:与JS的剩余函数有点类似</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def demo(*param):</div><div class="line">   print(param)</div><div class="line">   print(type(param))</div><div class="line"></div><div class="line">demo(1, 2, 3, 4, 5) //会自动将参数包装为元组</div><div class="line">demo(*a) //可以直接传元组</div></pre></td></tr></table></figure>
-</li>
-<li><p>关键字可变参数：其形参是dict</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">def city_temp(**param):</div><div class="line">   print(param) //&#123;xx: &apos;&apos;, xx:&apos;&apos;&#125;</div><div class="line">   print(type(param)) //dict</div><div class="line">   for key,value in param.items(): //字典需要调用该方法</div><div class="line">       print(key,&apos;:&apos;, value)</div><div class="line"></div><div class="line">city_temp(bj=&apos;32c&apos;, xm=&apos;23c&apos;, sh=&apos;31c&apos;)</div><div class="line"></div><div class="line">city_temp(**&#123;bj=&apos;32c&apos;, xm=&apos;23c&apos;, sh=&apos;31c&apos;&#125;)</div></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2018/01/31/1月-月度总结/#more">阅读全文 >></a>
+        
       
 
       
@@ -249,10 +191,6 @@
 
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/31/1月-月度总结/">展开全文 >></a>
-        </p>
       
 
       
@@ -306,73 +244,9 @@
 <p>12月份对于笔记来说一个比较重要的点就是，我开始使用markdown来记录啦，的确方便快捷了许多。</p>
 <p>对于我个人而言，当然就是开始参加工作啦！在工作中获益匪浅呢，以下许多知识点都是在工作中发现并学习到的呢。</p>
 <p>这篇是第一篇，所以前言会比较啰嗦，以后的前言会尽量向总结月的主要内容靠近。</p>
-<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
-<li>arguments和params的区别：arguments是实参，paramas则是形参</li>
-<li>浅拷贝：指的是拷贝引用，拷贝后的引用都是指向同一个对象的实例，彼此之间的操作会互相影响</li>
-<li><p>深拷贝：在堆中重新分配内存，并且把源对象所有属性都进行新建拷贝，拷贝后的对象和原来的对象是完全隔离，互不影响的</p>
-<p>  通过JSON解析来进行深拷贝</p>
-<p>  这个方案可以解决大部分使用场景，但是也有几点缺陷</p>
-<ol>
-<li>无法实现对函数、RegExp等对象的克隆</li>
-<li>会抛弃对象的constructor，所有的构造函数会指向Object</li>
-<li>对象那个有循环引用会报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var test = &#123;</div><div class="line">	name: &#123;</div><div class="line">		xing: &#123;</div><div class="line">			first: &apos;张&apos;,</div><div class="line">			second: &apos;李&apos;</div><div class="line">		&#125;,</div><div class="line">		ming: &apos;老头&apos;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">var result = JSON.parse(JSON.stringify(test));</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>结构赋值：详见 工作-12.21 </p>
-</li>
-<li>组合模式构建组件的方式 详见 工作- 12.27</li>
-</ul>
-<h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><ul>
-<li>path.resolve：该方法把一个路径或路径片段的序列解析为一个绝对路径（在alias里面经常可以用到）</li>
-<li>process.cwd(): 返回Node进程当前的工作目录</li>
-<li>fs.readdirSync:同步的readdir版本，返回一个不包括’.’和’..’的文件名的数组</li>
-<li>process.argv 是返回一个数组，由命令行执行脚本时的各个参数组成，也就是可以在node XXX.JS XXX参数，就可以获取到。</li>
-</ul>
-<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
-<li>导航守卫：通过跳转或取消的方式来守卫导航</li>
-<li>mixin：是一种分发Vue组件中可复用功能非常灵活的方式。类似于Angular中的服务</li>
-</ul>
-<h2 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h2><ul>
-<li>一些基础操作和命令详见：日志-12.30</li>
-</ul>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ul>
-<li>Canvas:<ul>
-<li>读取图片应该使用image.onload 来加载，否则因为异步问题可能无法画出来</li>
-<li>canvasdrawImage可以draw画布(用于一层幕布为背景，一层幕布为主场景)</li>
-</ul>
-</li>
-<li>figure标签：规定独立的流内容，如果被删除则不应对文档产生影响<br>以后附带照片加描述的都可以用这个来代替，也更加语义化（苹果官网的用法）</li>
-<li>shortcut icon：特指浏览器中地址栏左侧显示的图标，一般大小为16x16，后缀名为.icon；</li>
-<li>一些图标性质的元素，应该加上title增加可读性</li>
-<li>hr 用于横线</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li><p>sourcemap：Source map就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置。 有了它，出错的时候，除错工具将直接显示原始代码，而不是转换后的代码。这无疑给开发者带来了很大方便。</p>
-<p>  如何使用？</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//@ sourceMappingURL=/path/to/file.js.map</div></pre></td></tr></table></figure>
-<p>  只要在转换后的代码尾部，加上一行就可以了。</p>
-<p>  所以这里我们就可以只在压缩之后生成sourcemap就好了，开发环境下可以不生成sourcemap</p>
-</li>
-<li>rimraf node_modules：快速删除，稳准狠</li>
-<li>MongoDB:设置命令等详见 日志-12.17</li>
-<li>Commit规范：详见 工作-12.27</li>
-<li>token：详见 工作-12.21</li>
-</ul>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>非常棒的一个观点，我读完之后，醍醐灌顶，必须再次重点记录一下。</p>
-<h3 id="如何评价阮一峰关于前端工具变化快的言论？"><a href="#如何评价阮一峰关于前端工具变化快的言论？" class="headerlink" title="如何评价阮一峰关于前端工具变化快的言论？"></a>如何评价阮一峰关于前端工具变化快的言论？</h3><p>最近被问到了类似的问题，感觉学的速度赶不上技术演进的速度。</p>
-<p>我的理解是，技术的分布有两个特点：<strong>枣核型</strong>和<strong>网状结构</strong>。</p>
-<p><strong>枣核型</strong>是指越靠近底层（语言，算法，数据结构，http，tcp……）和越靠近高层（分层，组件，概念，理论，模式，经验，思想，平衡）的知识和经验越少且稳定。而越靠近中间（框架，工具）越多且不稳定。</p>
-<p><strong>网状结构</strong>是指计算机的技术没有一个线性的学习路线，所有的知识和技术都是一个网状中的节点，之间相互连接（这也是为什么刚入行的人很纠结的原因，东西太多，不知道学什么，与校园中的熟悉的明确的线性学习路径不一样），这就造成了一开始学东西很难很慢，越学越快的原因，因为之后大部分新技术的学习只是与自己的知识网中的其他已知节点之间建立关联即可。</p>
-<p>所以对于一开始如何学习的问题，我给的建议是：</p>
-<ol>
-<li>将时间重点投入到底层和高层的知识建设中，中间层次的工具和框架用到什么学什么，主要目的还是丰富和实践底层以及高层知识体系。 </li>
-<li>多学多用多实践多思考多总结，不着急速成，不强求最新最时髦，静心培养建设自己的知识网状体系。</li>
-</ol>
-<p>作者：王健</p>
-<p>链接：<a href="https://www.zhihu.com/question/34449620/answer/58843662" target="_blank" rel="external">https://www.zhihu.com/question/34449620/answer/58843662</a></p>
-<p>来源：知乎</p>
-
+        
+          <a class="article-more-a" href="/2017/12/31/12月-月度总结/#more">阅读全文 >></a>
+        
       
 
       
@@ -393,10 +267,6 @@
 
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/31/12月-月度总结/">展开全文 >></a>
-        </p>
       
 
       
@@ -447,12 +317,9 @@
       
         <p> 联赛十轮过后积20分，巴萨积28分，相差八分，总有一种似曾相识的感觉，那是在穆三年的时候啊，最后那年的结果是四大皆空，想到这里不免一阵恶寒。</p>
 <p> 这场比赛，我看起来就很难受，球员踢的也很难受，场面竟然一度被压制，哇，未免冠军啊，对阵的是升班马啊，这什么情况，球员兴奋度也不是特别高，有点散漫，而反观对手，高位防守逼抢，他们的态度就比皇马的队员好的多，那么赢下比赛自然也就是情理之中。</p>
-<h2 id="防守"><a href="#防守" class="headerlink" title="防守"></a>防守</h2><p>  先说说两个丢球吧，两个丢球都是中场眼神防守，后卫各种尴尬失误，对方神级发挥，嗯，然后就。。是门将的能力也是不行，虽然这两个丢球都不算是门将的责任。<br>  但是就整场比赛来看，上半场的两个门柱也应该敲响警钟了呀。后卫的瓦拉内受伤也是致命的呀，纳乔就实力而言，还是不如瓦拉内，接下来周中就要面临更大的考验了，这样的后防线会交出令人满意的答卷吗？</p>
-<h2 id="进攻"><a href="#进攻" class="headerlink" title="进攻"></a>进攻</h2><p>  本泽马，还是没有展现出豪门主力中锋的霸气，而C罗当家头牌今天还是被限制得死死的。虽然间接造就了一个进球，可是这场比赛想必C罗是踢的很别扭的。</p>
-<p>  这里就得提一下，前场的进攻还是没有可以持球突破的点，伊斯科作为皇马未来的中流砥柱，这场比赛还是没有合格呀，没有能扛起进攻的大旗</p>
-<p>  这场比赛中场的控制力竟然还不如对方，赫罗纳竟然可以多次持球进攻威胁球门，掌握球场的主动权。哇，这不是我熟悉的皇马！</p>
-<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p>  伊斯科，对你的期望真的很高啊.未来就是你的天下啦，希望你可以成长为媲美莫德里奇的中场大师<br>  皇马上个赛季毫无疑问是巅峰时期，欧冠卫冕，联赛称王.这都是值得称赞的.但是巅峰过后的下滑是不可避免的.重要的是怎么去调整，<br>  齐达内已经是一个优秀的教练，那么怎么调整好球队，这就是齐达内的赛后作业了.加油吧，接下来的考验会越来越多哦，但是我还是会坚定的支持。加油吧！</p>
-
+        
+          <a class="article-more-a" href="/2017/10/31/皇马VS赫罗纳-赛后感想/#more">阅读全文 >></a>
+        
       
 
       
@@ -473,10 +340,6 @@
 
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/31/皇马VS赫罗纳-赛后感想/">展开全文 >></a>
-        </p>
       
 
       
@@ -529,31 +392,9 @@
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>如果我们想要用组件，就必须修改在build目录下的webpack.base.conf.js</p>
 <p>添加下面的内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">    extensions: [&apos;.js&apos;, &apos;.vue&apos;, &apos;.json&apos;],</div><div class="line">    alias: &#123;</div><div class="line">      &apos;@&apos;: resolve(&apos;src&apos;),</div><div class="line">      &apos;vue&apos;: &apos;vue/dist/vue.esm.js&apos;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
-<h2 id="打包后图片路径的问题"><a href="#打包后图片路径的问题" class="headerlink" title="打包后图片路径的问题"></a>打包后图片路径的问题</h2><p>在我的项目中就遇到了在本地serve下，页面资源可以正常的加载，但是在打包后，却提示某些图片资源或者js文件的后面几行缺失等问题。</p>
-<h3 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h3><ul>
-<li><p>设置build目录下的utils.js对应的代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if (options.extract) &#123;</div><div class="line">     return ExtractTextPlugin.extract(&#123;</div><div class="line">       use: loaders,</div><div class="line">       fallback: &apos;vue-style-loader&apos;,</div><div class="line">       publicPath:&apos;../../&apos;,</div><div class="line">     &#125;)</div></pre></td></tr></table></figure>
-<p>增加publicPath，这个设置主要就是为了解决css的背景图片的问题。</p>
-<p>设置config目录下的index.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">build: &#123;</div><div class="line">   env: require(&apos;./prod.env&apos;),</div><div class="line">   index: path.resolve(__dirname, &apos;../dist/index.html&apos;),</div><div class="line">   assetsRoot: path.resolve(__dirname, &apos;../dist&apos;),</div><div class="line">   assetsSubDirectory: &apos;static&apos;,</div><div class="line">   assetsPublicPath: &apos;&apos;,</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这里把assetsPublicPath 变为空字符。</p>
-<ul>
-<li>css要用到的背景图片<br>  把静态资源文件夹static(也可以是其他的命名，或者直接放在assets里面)放在src目录下面。在css文件中引入的时候就可以使用<br>  所以在接下来在实际的css中要引用的时候就可以这样子写：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: url(&quot;../static/img/timg.jpg&quot;) no-repeat;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这里的css就是在src/component对应的templete里面。因为上面的复制，这里就可以在src找到static里的img，那么css背景引入也就可以解决了。<br> 当然了打包的dist里面还是照常的img,css,js,fonts</p>
-<ul>
-<li><p>html引入的img的图片<br>  因为html默认就应该是在根目录，所以应该把资源放在根目录的static目录下<br>对应的代码就是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;static/img/spider.jpg&quot;</div></pre></td></tr></table></figure>
-</li>
-<li><p>css,js等文件<br>  这个就跟1中一样，把对应文件放在static的目录下就可以使用了<br>  对应的main.js 代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &apos;./static/css/animate.css&apos;;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>这个坑我踩了一早上才跳出来，期间无数次的更改，也是很郁闷。<br>这里做一下记录，以备以后查询吧，网上的方案一个个比较片面，这里还是相对综合的解决方案，而且webpack打包出来的也可以直接在本地 运行，这样子还是比较舒服的。<br>因为是自己瞎琢磨的，可能会有更好的解决方案，或者完善的一步到位，但是，目前我还没找到，期待以后能力更强之后来修补这个坑吧。<br>学海无涯，还需要继续刻苦学习呀！加油！</p>
-
+        
+          <a class="article-more-a" href="/2017/10/10/Vue-cli遇到的问题及解决方案记录/#more">阅读全文 >></a>
+        
       
 
       
@@ -566,7 +407,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心得</a>
         		</li>
       		
 		</ul>
@@ -574,10 +415,6 @@
 
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/10/Vue-cli遇到的问题及解决方案记录/">展开全文 >></a>
-        </p>
       
 
       
@@ -626,47 +463,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="博客的建立"><a href="#博客的建立" class="headerlink" title="博客的建立"></a>博客的建立</h3><ol>
-<li>安装git,node,hexo</li>
-<li>注册github,并且建立一个对应自己用户名的仓库（也就是gitHub pages）</li>
-<li>在自己想要的目录下初始化hexo（具体教程官网很详细）</li>
-<li><p>在hexo的_config.yml 中找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">        type: git</div><div class="line">        repo:  https://github.com/XX/XXX.github.io.git</div><div class="line">        branch: master</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>这里的后缀记得要加上.git 不然就会部署不到github上面。</p>
-<ol>
-<li><p>运行命令 npm install hexo-deployer-git –save </p>
-</li>
-<li><p>最后，下载自己喜欢的主题，config设置一下，就可以部署到网页上面啦。</p>
-</li>
-</ol>
-<p>接下来就是激动人心的时刻啦，终于有了属于自己的博客啦！</p>
-<h3 id="自定义页面"><a href="#自定义页面" class="headerlink" title="自定义页面"></a>自定义页面</h3><p> 为了上传自己制作的页面，定制主页，也是费了不少的时间，不过好在圆满解决，还是挺开心的，下面是一些我的心得。</p>
-<p> 因为hexo会渲染相关目录下的html css js等文件，所以如果只是单纯的放在根目录的source下面的话，页面的就会出错。</p>
-<p> 在html顶部设置 layout：false的做法有些缺陷，js，css等文件不能使用本地的，只能使用外链的，这显然很不方便 </p>
-<p> 我的解决方案就是把自己做的页面和相关文件放入主题里面的source文件夹中，因为主题source文件夹中的东西会被自动复制到public中，也不会被渲染，那么也就不会报错啦。</p>
-<p> 这个就是终极解决方案了。</p>
-<p><strong>自定义主页</strong></p>
-<p>下载的主题固然很好，设置也很全面，但是呢，有些地方资源缺失，还是有点不大舒服，所以我还是自己操刀上阵了，修改了点东西。</p>
-<ul>
-<li><p>首先，要删除hexo根目录下，node_modules里面的hexo-generator-index模块。因为这个模块会自己渲染主题默认的页面，但是我们要做修改的话，肯定是要删掉的</p>
-</li>
-<li><p>接下来在自己主题目录下的source目录下新建一个index.html 然后就可以在里面进行自己喜欢的定制啦。</p>
-</li>
-<li><p>需要注意的是自己定制的主页可能无法实时更新哦，所以需要自己权衡一下。</p>
-</li>
-</ul>
-<p><strong>自定义页面</strong></p>
-<p> 自己制作的网页如果要上传，应该先把主页弄个链接给到上传的网页，这个可以在主题的html设置，记得在路径前面加上 / 这个就表示当前的source文件夹了。</p>
-<p> 当然也可以直接在自己定制的主页上面弄个链接，这些都可以。</p>
-<h3 id="上传部署"><a href="#上传部署" class="headerlink" title="上传部署"></a>上传部署</h3><p> 如果前面有部署好的话，hexo根目录下应该有一个.deploy_git文件夹，这个也就是在部署在github页面上的文件存储的地方了。</p>
-<p> 我们要部署的话，应该现在hexo根目录下进行hexo g 然后再进入前面的那个文件夹，运行hexo d，等待一段时间，就会部署到网上啦。</p>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p> 建立博客的过程中，自己一个人瞎摸索，各种找资料，误操作，其中还把git删了一遍。。。不过，总算还是把博客的基本功能完成了。</p>
-<p> 感谢这个美好的互联网时代！</p>
-<p> 接下来，还有很多地方需要自己不断的耕耘学习！</p>
-<p> 结合我的经历，请记得备份！</p>
-
+        <p>hello，今天简单的记录一下自己建立博客的过程吧。</p>
+        
+          <a class="article-more-a" href="/2017/10/05/Hexo-博客建立心得/#more">阅读全文 >></a>
+        
       
 
       
@@ -687,10 +487,6 @@
 
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/05/Hexo-博客建立心得/">展开全文 >></a>
-        </p>
       
 
       
@@ -750,10 +546,6 @@
       
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/04/Hello/">展开全文 >></a>
-        </p>
       
 
       
@@ -876,10 +668,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
