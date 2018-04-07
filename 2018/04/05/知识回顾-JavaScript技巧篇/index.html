@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="Hadwz.me">
-  <title>Archives: 2017/10 | Hadwz</title>
+  <title>知识回顾-JavaScript技巧篇 | Hadwz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hadwz">
-<meta property="og:url" content="Hadwz.me/archives/2017/10/index.html">
+  <meta name="description" content="摘要Code…">
+<meta name="keywords" content="知识回顾">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知识回顾-JavaScript技巧篇">
+<meta property="og:url" content="Hadwz.me/2018/04/05/知识回顾-JavaScript技巧篇/index.html">
 <meta property="og:site_name" content="Hadwz">
+<meta property="og:description" content="摘要Code…">
+<meta property="og:image" content="https://github.com/mqyqingfeng/Blog/raw/master/Images/sort/insertion.gif">
+<meta property="og:updated_time" content="2018-04-07T14:46:09.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hadwz">
+<meta name="twitter:title" content="知识回顾-JavaScript技巧篇">
+<meta name="twitter:description" content="摘要Code…">
+<meta name="twitter:image" content="https://github.com/mqyqingfeng/Blog/raw/master/Images/sort/insertion.gif">
   
     <link rel="alternative" href="/atom.xml" title="Hadwz" type="application/atom+xml">
   
@@ -137,163 +144,204 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-知识回顾-JavaScript技巧篇" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      知识回顾-JavaScript技巧篇
+    </h1>
+  
+
+        
+        <a href="/2018/04/05/知识回顾-JavaScript技巧篇/" class="archive-article-date">
+  	<time datetime="2018-04-05T06:31:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>Code…</p>
+<a id="more"></a>
+<h2 id="深浅拷贝"><a href="#深浅拷贝" class="headerlink" title="深浅拷贝"></a>深浅拷贝</h2><h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> data = <span class="built_in">Object</span>.assign(&#123;&#125;, datas, &#123;</div><div class="line">	x: <span class="string">'2'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="深度拷贝"><a href="#深度拷贝" class="headerlink" title="深度拷贝"></a>深度拷贝</h3><p>这里使用的JSON可以解决大部分使用场景，但是有几点缺陷</p>
+<ol>
+<li>无法实现对函数、RegExp等对象的克隆</li>
+<li>所有的构造函数会指向Object</li>
+<li>对象有循环引用的会报错</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test =&#123;</div><div class="line">	  	name:&#123;</div><div class="line">	  	 xing:&#123; </div><div class="line">	  	     first:<span class="string">'张'</span>,</div><div class="line">	  	     second:<span class="string">'李'</span></div><div class="line">	  	&#125;,</div><div class="line">	  	ming:<span class="string">'老头'</span></div><div class="line">	  &#125;,</div><div class="line">	  age :<span class="number">40</span>,</div><div class="line">	  friend :[<span class="string">'隔壁老王'</span>,<span class="string">'宋经纪'</span>,<span class="string">'同事'</span>]</div><div class="line">	 &#125;</div><div class="line">	 </div><div class="line"><span class="keyword">var</span> result = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(test))</div><div class="line">result.age = <span class="number">30</span></div><div class="line">result.name.xing.first = <span class="string">'往'</span></div><div class="line">result.friend.push(<span class="string">'fdagldf;ghad'</span>)</div><div class="line"><span class="built_in">console</span>.dir(test)</div><div class="line"><span class="built_in">console</span>.dir(result)</div></pre></td></tr></table></figure>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h3><ol>
+<li><strong>Set去重</strong></li>
+</ol>
+<p>Set它类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
+<p>这个方法的缺点在于数组元素是对象的话无法去重</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> unique = <span class="function">(<span class="params">arr</span>) =&gt;</span> [...new <span class="built_in">Set</span>(arr)]</div></pre></td></tr></table></figure>
+<ol>
+<li><strong>利用键值对去重</strong></li>
+</ol>
+<p>这个方法的好处在于无论是对象还是其他的类型，都可以去重</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [&#123;<span class="attr">value</span>: <span class="number">1</span>&#125;, &#123;<span class="attr">value</span>: <span class="number">1</span>&#125;, &#123;<span class="attr">value</span>: <span class="number">2</span>&#125;];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</div><div class="line">		<span class="comment">// console.log(typeof item + JSON.stringfy(item));</span></div><div class="line">		<span class="keyword">var</span> key = <span class="keyword">typeof</span> item + <span class="built_in">JSON</span>.stringfy(item);</div><div class="line">		<span class="keyword">return</span> obj.hasOwnProperty(key) ? <span class="literal">false</span> : (obj[key] = <span class="literal">true</span>)</div><div class="line">	&#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(unique(array)); <span class="comment">// [&#123;value: 1&#125;, &#123;value: 2&#125;]</span></div></pre></td></tr></table></figure>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>这里的排序主要是应用于两种场景，一种是数组长度在10以下，一种是大于10。不过呢，最简单粗暴的呢就是直接使用sort了。</p>
+<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><p>将第一个元素视为有序序列，遍历数组，将之后的元素依次插入这个构建的有序序列中。</p>
+<ul>
+<li>图示</li>
+</ul>
+<p><img src="https://github.com/mqyqingfeng/Blog/raw/master/Images/sort/insertion.gif" alt="image"></p>
+<ul>
+<li>实现</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insertSort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</div><div class="line">		<span class="keyword">var</span> element = arr[i];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> j = i <span class="number">-1</span>; j&gt;= <span class="number">0</span>; j--) &#123;</div><div class="line">			<span class="keyword">var</span> tmp = arr[j];</div><div class="line">			<span class="keyword">var</span> order = tmp - element;</div><div class="line">			<span class="keyword">if</span> (order &gt; <span class="number">0</span>) &#123;</div><div class="line">				arr[j+<span class="number">1</span>] = tmp;</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		arr[j+<span class="number">1</span>] = element;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><ul>
+<li>原理<ol>
+<li>选择一个元素作为基准</li>
+<li>小于基准的元素都移到基准的左边，大于基准的元素都移到基准的右边</li>
+<li>对于基准左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>实现<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> quickSort = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span> (arr.length &lt;= <span class="number">1</span>) &#123; <span class="keyword">return</span> arr&#125;; <span class="comment">//递归边界条件</span></div><div class="line"></div><div class="line">	<span class="comment">//取数组的中间元素作为基准</span></div><div class="line">	<span class="keyword">var</span> pivotIndex = <span class="built_in">Math</span>.floor(arr.length / <span class="number">2</span>);</div><div class="line">	<span class="keyword">var</span> pivot = arr.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>];</div><div class="line">	<span class="keyword">var</span> left = [];</div><div class="line">	<span class="keyword">var</span> right = [];</div><div class="line"></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">		<span class="keyword">if</span> (arr[i] &lt; pivot) &#123;</div><div class="line">			left.push(arr[i]);</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			right.push(arr[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> quickSort(left).concat([pivot], quickSort(right));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数记忆"><a href="#函数记忆" class="headerlink" title="函数记忆"></a>函数记忆</h3><p>函数记忆是指将上次的计算结果缓存起来，当下次调用时，如果遇到相同的参数，就直接返回缓存中的数据。</p>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>当需要大量重复计算，或者大量重复计算又依赖于之前的结果，便可以考虑使用函数记忆</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//来自 underscore 的实现</span></div><div class="line"><span class="keyword">var</span> memoize = <span class="function"><span class="keyword">function</span>(<span class="params">func, hasher</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> memoize = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> cache = memoize.cache;</div><div class="line">        <span class="keyword">var</span> address = <span class="string">''</span> + (hasher ? hasher.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>) : key);</div><div class="line">        <span class="keyword">if</span> (!cache[address]) &#123;</div><div class="line">            cache[address] = func.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> cache[address];</div><div class="line">    &#125;;</div><div class="line">    memoize.cache = &#123;&#125;;</div><div class="line">    <span class="keyword">return</span> memoize;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//如果要支持多参数，我们就需要传入 hasher 函数，自定义存储的 key 值。所以我们考虑使用 JSON.stringify</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> memoizedAdd = memoize(add, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>)</div><div class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(args)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(memoizedAdd(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)) <span class="comment">// 6</span></div><div class="line"><span class="built_in">console</span>.log(memoizedAdd(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>)) <span class="comment">// 7</span></div></pre></td></tr></table></figure>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>以上文章的大部分知识和代码来自</p>
+<p>作者：mqyqingfeng</p>
+<p>链接：<a href="https://github.com/mqyqingfeng/Blog" target="_blank" rel="external">https://github.com/mqyqingfeng/Blog</a></p>
+<p>他的许多文章让我获益匪浅，非常感谢他！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/皇马VS赫罗纳-赛后感想/" class="archive-article-date">
-  	<time datetime="2017-10-30T16:47:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/皇马VS赫罗纳-赛后感想/">皇马VS赫罗纳 赛后感想</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">足球</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识回顾</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:Hadwz.me/2018/04/05/知识回顾-JavaScript技巧篇/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/10/Vue-cli遇到的问题及解决方案记录/" class="archive-article-date">
-  	<time datetime="2017-10-09T17:18:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/04/06/知识回顾-基础知识篇/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          知识回顾-基础知识篇
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/03/知识回顾-CSS篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">知识回顾-CSS篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/10/Vue-cli遇到的问题及解决方案记录/">Vue-cli遇到的问题及解决方案记录</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心得</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/05/Hexo-博客建立心得/" class="archive-article-date">
-  	<time datetime="2017-10-04T17:26:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/Hexo-博客建立心得/">Hexo 博客建立心得</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心得</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/04/Hello/" class="archive-article-date">
-  	<time datetime="2017-10-04T11:00:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/04/Hello/">Hello</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -316,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

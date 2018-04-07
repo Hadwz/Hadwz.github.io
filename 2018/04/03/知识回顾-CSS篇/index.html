@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="Hadwz.me">
   <title>知识回顾-CSS篇 | Hadwz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！） 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
+  <meta name="description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了 talk is cheap, show me the code！ 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
 <meta name="keywords" content="知识回顾">
 <meta property="og:type" content="article">
 <meta property="og:title" content="知识回顾-CSS篇">
 <meta property="og:url" content="Hadwz.me/2018/04/03/知识回顾-CSS篇/index.html">
 <meta property="og:site_name" content="Hadwz">
-<meta property="og:description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！） 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
-<meta property="og:updated_time" content="2018-04-07T11:03:24.455Z">
+<meta property="og:description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了 talk is cheap, show me the code！ 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
+<meta property="og:updated_time" content="2018-04-07T16:08:39.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="知识回顾-CSS篇">
-<meta name="twitter:description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！） 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
+<meta name="twitter:description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了 talk is cheap, show me the code！ 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
   
     <link rel="alternative" href="/atom.xml" title="Hadwz" type="application/atom+xml">
   
@@ -83,8 +83,6 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -121,8 +119,6 @@
 						<a class="github" target="_blank" href="https://github.com/Hadwz" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
-			        
-						<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -166,7 +162,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！）</p>
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了</p>
+<p>talk is cheap, show me the code！</p>
 <p>所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。</p>
 <p>以上<br><a id="more"></a></p>
 <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><ul>
@@ -200,8 +197,7 @@
 </ol>
 <h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><p>用display:table 是为了避免外边距margin重叠导致的margin塌陷,<br>内部元素默认会成为 table-cell 单元格的形式</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">	<span class="attribute">content</span>:<span class="string">""</span>;</div><div class="line">	<span class="attribute">display</span>:table;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">	<span class="attribute">clear</span>:both;</div><div class="line">	<span class="attribute">overflow</span>:hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span>&#123;</div><div class="line">    <span class="attribute">zoom</span>:<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>###　垂直居中</p>
-<h4 id="固定宽高的情况"><a href="#固定宽高的情况" class="headerlink" title="固定宽高的情况"></a>固定宽高的情况</h4><p>从本质上来讲，它将元素的左上角移到视窗中心点（值是元素宽和高的一半），使元素的中心点与视窗中心点重合<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">main</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="built_in">calc</span>(50%-3em); <span class="comment">/*margin-top:-3em*/</span></div><div class="line">	<span class="attribute">left</span>: <span class="built_in">calc</span>(50%-9em); <span class="comment">/*margin-left:-9em*/</span></div><div class="line">	<span class="attribute">height</span>: <span class="number">18em</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">6em</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><h4 id="固定宽高的情况"><a href="#固定宽高的情况" class="headerlink" title="固定宽高的情况"></a>固定宽高的情况</h4><p>从本质上来讲，它将元素的左上角移到视窗中心点（值是元素宽和高的一半），使元素的中心点与视窗中心点重合<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">main</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="built_in">calc</span>(50%-3em); <span class="comment">/*margin-top:-3em*/</span></div><div class="line">	<span class="attribute">left</span>: <span class="built_in">calc</span>(50%-9em); <span class="comment">/*margin-left:-9em*/</span></div><div class="line">	<span class="attribute">height</span>: <span class="number">18em</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">6em</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h4 id="不定宽高的情况"><a href="#不定宽高的情况" class="headerlink" title="不定宽高的情况"></a>不定宽高的情况</h4><ol>
 <li><p>transform：通过transofrm中的translate使用百分比，让元素移动相对于自身宽度和高度的一半</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">main</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -314,6 +310,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/04/05/知识回顾-JavaScript技巧篇/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          知识回顾-JavaScript技巧篇
+        
+      </div>
+    </a>
   
   
     <a href="/2018/04/02/知识回顾-Javascript篇/" id="article-nav-older" class="article-nav-link-wrap">
