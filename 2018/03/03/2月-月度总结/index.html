@@ -15,7 +15,7 @@
 <meta property="og:url" content="Hadwz.me/2018/03/03/2月-月度总结/index.html">
 <meta property="og:site_name" content="Hadwz">
 <meta property="og:description" content="前言2月份是属于春节的，玩心萌动，几天的假期都是在玩中度过，虽然很开心吧，但是内心深处总有一种罪恶感。。。 本月的笔记较之前就比较乏善可陈，主要是以代码居多，还是得记录下才行。">
-<meta property="og:updated_time" content="2018-04-06T15:00:20.292Z">
+<meta property="og:updated_time" content="2018-04-07T08:44:29.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2月-月度总结">
 <meta name="twitter:description" content="前言2月份是属于春节的，玩心萌动，几天的假期都是在玩中度过，虽然很开心吧，但是内心深处总有一种罪恶感。。。 本月的笔记较之前就比较乏善可陈，主要是以代码居多，还是得记录下才行。">
@@ -83,6 +83,8 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
+					<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -119,6 +121,8 @@
 						<a class="github" target="_blank" href="https://github.com/Hadwz" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -166,16 +170,17 @@
 <p>本月的笔记较之前就比较乏善可陈，主要是以代码居多，还是得记录下才行。</p>
 <a id="more"></a>
 <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
-<li>手机端隐藏滚动条<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">//HTML</div><div class="line">&lt;div class=&quot;outer-container&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner-container&quot;&gt;</div><div class="line">        &lt;div class=&quot;content&quot;&gt;</div><div class="line">                ......</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">//CSS</div><div class="line">.outer-container,.content &#123;</div><div class="line">    width: 200px; height: 200px;</div><div class="line">&#125;</div><div class="line">.outer-container &#123;</div><div class="line">    position: relative;</div><div class="line">    overflow: hidden;</div><div class="line">&#125;</div><div class="line">.inner-container &#123;</div><div class="line">    position: absolute; left: 0;</div><div class="line">    overflow-x: hidden;</div><div class="line">    overflow-y: scroll;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> /* for Chrome */</div><div class="line">.inner-container::-webkit-scrollbar &#123;</div><div class="line">    display: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>手机端隐藏滚动条<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//HTML</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"outer-container"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner-container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">                ......</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.outer-container</span>,<span class="selector-class">.content</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>; <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.outer-container</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.inner-container</span> &#123;</div><div class="line">    <span class="attribute">position</span>: absolute; <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">overflow-x</span>: hidden;</div><div class="line">    <span class="attribute">overflow-y</span>: scroll;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> <span class="comment">/* for Chrome */</span></div><div class="line"><span class="selector-class">.inner-container</span><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</div><div class="line">    <span class="attribute">display</span>: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
 <li>element的el-table-column：应该给它设置唯一的key值，否则会出现宽度无限大的情况 如果给表格设置min-width，会出现输入数据后，表格抖动</li>
 <li><p>props的双向绑定：利用v-model，然后使用value来保存value的值，进行双向绑定</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">//子组件</div><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class=&quot;modal&quot; :value=&quot;value&quot; v-show=&quot;visible&quot;&gt;</div><div class="line">      &lt;div class=&quot;close&quot; @click=&quot;cancel&quot;&gt;X&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line"></div><div class="line">export default &#123;</div><div class="line">    props: &#123;</div><div class="line">      value: &#123;</div><div class="line">        type: Boolean,</div><div class="line">        default:false</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      visible:false</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  watch:&#123;</div><div class="line">      value(val) &#123;</div><div class="line">        console.log(val);</div><div class="line">        this.visible = val;</div><div class="line">      &#125;,</div><div class="line">      visible(val) &#123;</div><div class="line">        this.$emit(&apos;input&apos;, val);</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">//父组件调用</div><div class="line">&lt;modal v-model=&quot;isShow&quot;&gt;&lt;/modal&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>$Message:单独引入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123;Message&#125; from &apos;element-ui&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Message&#125; <span class="keyword">from</span> <span class="string">'element-ui'</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h2><ul>
@@ -184,7 +189,7 @@
 <p>  因为HttpClient把 JSON 格式的响应体解析成了一个Object，它并不知道这个对象的形态应该是什么</p>
 </li>
 <li><p>动态样式判断</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> //left、right 为类名</div><div class="line">[class.left]=&quot;m.userId === chatUserId&quot;</div><div class="line">[class.right]=&quot;m.userId === userId&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">//left、right 为类名</span></div><div class="line">[class.left]="m.userId === chatUserId"</div><div class="line">[class.right]="m.userId === userId"</div></pre></td></tr></table></figure>
 </li>
 <li><p>@ViewChild:它的作用是声明对子组件元素的实例引用，意思是通过注入的方式将子组件注入到@ViewChild容器中</p>
 </li>
@@ -205,15 +210,16 @@
 </ul>
 </li>
 <li><p>指定tab切换</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">selectTab(index: number) &#123;</div><div class="line">    let t:Tabs = this.navCtrl.parent;</div><div class="line">    t.select(index);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">selectTab(index: number) &#123;</div><div class="line">    <span class="keyword">let</span> t:Tabs = <span class="keyword">this</span>.navCtrl.parent;</div><div class="line">    t.select(index);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p><strong>页面间的传参接参</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 1.编程导航</div><div class="line">this.navCtrl.push(DetailsPage, &#123;id: questionId&#125;) //传参数</div><div class="line">this.id = this.navParams.get(&apos;id&apos;); //接受参数</div><div class="line">// 2.标签导航</div><div class="line">  //html</div><div class="line">    &lt;ion-avatar item-left [navPush]=&quot;ChatdetailsPage&quot; [navParams]=&quot;userinfo&quot;&gt;</div><div class="line">    </div><div class="line">	//参数获取</div><div class="line">	this.chatUserName = navParams.get(&apos;username&apos;);</div></pre></td></tr></table></figure>
 </li>
 <li><p>下拉刷新</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;ion-refresher (ionRefresh)=&quot;doRefresh($event)&quot;&gt;</div><div class="line">    &lt;ion-refresher-content</div><div class="line">      pullingIcon=&quot;arrow-dropdown&quot;</div><div class="line">      pullingText=&quot;下拉刷新&quot;</div><div class="line">      refreshingSpinner=&quot;circles&quot;</div><div class="line">      refreshingText=&quot;数据加载中...&quot;</div><div class="line">    &gt;</div><div class="line">    &lt;/ion-refresher-content&gt;</div><div class="line">&lt;/ion-refresher&gt;</div><div class="line"></div><div class="line">//JS</div><div class="line">doRefresh(refresher) &#123;</div><div class="line">    this.getQuestions();</div><div class="line">    refresher.complete();</div><div class="line">  &#125;</div></pre></td></tr></table></figure></li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ion-refresher</span> (<span class="attr">ionRefresh</span>)=<span class="string">"doRefresh($event)"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ion-refresher-content</span></span></div><div class="line"><span class="tag">      <span class="attr">pullingIcon</span>=<span class="string">"arrow-dropdown"</span></span></div><div class="line"><span class="tag">      <span class="attr">pullingText</span>=<span class="string">"下拉刷新"</span></span></div><div class="line"><span class="tag">      <span class="attr">refreshingSpinner</span>=<span class="string">"circles"</span></span></div><div class="line"><span class="tag">      <span class="attr">refreshingText</span>=<span class="string">"数据加载中..."</span></span></div><div class="line"><span class="tag">    &gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ion-refresher-content</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ion-refresher</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
 </ul>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//JS</span></div><div class="line">doRefresh(refresher) &#123;</div><div class="line">    <span class="keyword">this</span>.getQuestions();</div><div class="line">    refresher.complete();</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -434,6 +440,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识回顾</a>
               </li>
              
               <li class="article-tag-list-item">

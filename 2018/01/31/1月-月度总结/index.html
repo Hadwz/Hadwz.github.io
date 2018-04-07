@@ -15,7 +15,7 @@
 <meta property="og:url" content="Hadwz.me/2018/01/31/1月-月度总结/index.html">
 <meta property="og:site_name" content="Hadwz">
 <meta property="og:description" content="前言1月份因为已经开始做毕业设计了，还有一些考试临近，日子也有些紧凑，所以笔记可能就少了许多。 这个月，主要学习的方向是Ionic、Anuglar、Python。 Angular和Vue的相似点有很多，我自己也从Angualr中借鉴了许多知识并应用到了Vue的实际工作中，比如Angular的Pipe、Service，还有它整个项目的架构设计，算是一个不错的收获。 至于为什么会有Python，主要是">
-<meta property="og:updated_time" content="2018-04-06T11:30:50.947Z">
+<meta property="og:updated_time" content="2018-04-07T08:47:12.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1月-月度总结">
 <meta name="twitter:description" content="前言1月份因为已经开始做毕业设计了，还有一些考试临近，日子也有些紧凑，所以笔记可能就少了许多。 这个月，主要学习的方向是Ionic、Anuglar、Python。 Angular和Vue的相似点有很多，我自己也从Angualr中借鉴了许多知识并应用到了Vue的实际工作中，比如Angular的Pipe、Service，还有它整个项目的架构设计，算是一个不错的收获。 至于为什么会有Python，主要是">
@@ -83,6 +83,8 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
+					<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -119,6 +121,8 @@
 						<a class="github" target="_blank" href="https://github.com/Hadwz" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -203,7 +207,7 @@
 <li>ord(‘d’) == 100 查询ASCII码</li>
 <li>每个文件开头都应该有该文件的说明</li>
 <li>python不支持 ++ – 的自增自减运算符</li>
-<li>for循环  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//代表for(i=0; i&lt; 10; i++) </div><div class="line">for x in range(0, 10): //range第三个参数为步长，相当于i++</div><div class="line">    print(x)</div></pre></td></tr></table></figure>
+<li>for循环<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#代表for(i=0; i&lt; 10; i++) </span></div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">10</span>): <span class="comment">#range第三个参数为步长，相当于i++</span></div><div class="line">	print(x)</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="包、模块"><a href="#包、模块" class="headerlink" title="包、模块"></a>包、模块</h3><ul>
@@ -216,15 +220,15 @@
 <ol>
 <li>必须参数：必须放在前面，其他参数放在后面</li>
 <li><p>关键字参数：使函数不需要按照顺序传入，增加可读性（关键字参数也是属于必须参数）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">def add(x, y):</div><div class="line">   </div><div class="line">   result = x + y</div><div class="line">   return result</div><div class="line"></div><div class="line">//必须参数与关键字参数只在函数调用上有差异</div><div class="line">c = add(y=3, x=2)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y)</span>:</span></div><div class="line">	</div><div class="line">	result = x + y</div><div class="line">	<span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="comment">#必须参数与关键字参数只在函数调用上有差异</span></div><div class="line">c = add(y=<span class="number">3</span>, x=<span class="number">2</span>)</div></pre></td></tr></table></figure>
 </li>
 <li><p>默认参数</p>
 </li>
 <li><p>可变参数:与JS的剩余函数有点类似</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def demo(*param):</div><div class="line">   print(param)</div><div class="line">   print(type(param))</div><div class="line"></div><div class="line">demo(1, 2, 3, 4, 5) //会自动将参数包装为元组</div><div class="line">demo(*a) //可以直接传元组</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo</span><span class="params">(*param)</span>:</span></div><div class="line">	print(param)</div><div class="line">	print(type(param))</div><div class="line"></div><div class="line">demo(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>) <span class="comment">#会自动将参数包装为元组</span></div><div class="line">demo(*a) <span class="comment">#可以直接传元组</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>关键字可变参数：其形参是dict</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">def city_temp(**param):</div><div class="line">   print(param) //&#123;xx: &apos;&apos;, xx:&apos;&apos;&#125;</div><div class="line">   print(type(param)) //dict</div><div class="line">   for key,value in param.items(): //字典需要调用该方法</div><div class="line">       print(key,&apos;:&apos;, value)</div><div class="line"></div><div class="line">city_temp(bj=&apos;32c&apos;, xm=&apos;23c&apos;, sh=&apos;31c&apos;)</div><div class="line"></div><div class="line">city_temp(**&#123;bj=&apos;32c&apos;, xm=&apos;23c&apos;, sh=&apos;31c&apos;&#125;)</div></pre></td></tr></table></figure></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">city_temp</span><span class="params">(**param)</span>:</span></div><div class="line">	print(param) //&#123;xx: <span class="string">''</span>, xx:<span class="string">''</span>&#125;</div><div class="line">	print(type(param)) //dict</div><div class="line">	<span class="keyword">for</span> key,value <span class="keyword">in</span> param.items(): <span class="comment">#字典需要调用该方法</span></div><div class="line">			print(key,<span class="string">':'</span>, value)</div><div class="line"></div><div class="line">city_temp(bj=<span class="string">'32c'</span>, xm=<span class="string">'23c'</span>, sh=<span class="string">'31c'</span>)</div><div class="line"></div><div class="line">city_temp(**&#123;bj=<span class="string">'32c'</span>, xm=<span class="string">'23c'</span>, sh=<span class="string">'31c'</span>&#125;)</div></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ul>
@@ -449,6 +453,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识回顾</a>
               </li>
              
               <li class="article-tag-list-item">

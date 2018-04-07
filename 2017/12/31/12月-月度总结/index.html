@@ -15,7 +15,7 @@
 <meta property="og:url" content="Hadwz.me/2017/12/31/12月-月度总结/index.html">
 <meta property="og:site_name" content="Hadwz">
 <meta property="og:description" content="前言自己一直以来的笔记习惯是，以每一天为基本单位来进行记录。这样做的好处是每天的可以清晰记录自己get到了哪些点，方便每天晚上进行归纳总结。 但是坏处呢，也是显而易见，因为没有一个总的归纳，导致自己的知识很碎片化。所以为了更好的构建自己的知识体系，从这篇文章开始，会每个月进行一次知识点的总结归纳。 12月份对于笔记来说一个比较重要的点就是，我开始使用markdown来记录啦，的确方便快捷了许多。">
-<meta property="og:updated_time" content="2018-04-06T11:36:31.663Z">
+<meta property="og:updated_time" content="2018-04-07T08:40:39.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="12月-月度总结">
 <meta name="twitter:description" content="前言自己一直以来的笔记习惯是，以每一天为基本单位来进行记录。这样做的好处是每天的可以清晰记录自己get到了哪些点，方便每天晚上进行归纳总结。 但是坏处呢，也是显而易见，因为没有一个总的归纳，导致自己的知识很碎片化。所以为了更好的构建自己的知识体系，从这篇文章开始，会每个月进行一次知识点的总结归纳。 12月份对于笔记来说一个比较重要的点就是，我开始使用markdown来记录啦，的确方便快捷了许多。">
@@ -83,6 +83,8 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
+					<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -119,6 +121,8 @@
 						<a class="github" target="_blank" href="https://github.com/Hadwz" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-rong-bin-40/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="/hadwz@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -177,7 +181,7 @@
 <ol>
 <li>无法实现对函数、RegExp等对象的克隆</li>
 <li>会抛弃对象的constructor，所有的构造函数会指向Object</li>
-<li>对象那个有循环引用会报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var test = &#123;</div><div class="line">	name: &#123;</div><div class="line">		xing: &#123;</div><div class="line">			first: &apos;张&apos;,</div><div class="line">			second: &apos;李&apos;</div><div class="line">		&#125;,</div><div class="line">		ming: &apos;老头&apos;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">var result = JSON.parse(JSON.stringify(test));</div></pre></td></tr></table></figure>
+<li>对象那个有循环引用会报错<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test = &#123;</div><div class="line">	name: &#123;</div><div class="line">		xing: &#123;</div><div class="line">			first: <span class="string">'张'</span>,</div><div class="line">			second: <span class="string">'李'</span></div><div class="line">		&#125;,</div><div class="line">		ming: <span class="string">'老头'</span></div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> result = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(test));</div></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
@@ -455,6 +459,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识回顾</a>
               </li>
              
               <li class="article-tag-list-item">

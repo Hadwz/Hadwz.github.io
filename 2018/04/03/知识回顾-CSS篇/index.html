@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="Hadwz.me">
-  <title>Hello | Hadwz</title>
+  <title>知识回顾-CSS篇 | Hadwz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="嗨，欢迎来到我的博客，让我们一起互相学习进步吧！">
+  <meta name="description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！） 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
+<meta name="keywords" content="知识回顾">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="Hadwz.me/2017/10/04/Hello/index.html">
+<meta property="og:title" content="知识回顾-CSS篇">
+<meta property="og:url" content="Hadwz.me/2018/04/03/知识回顾-CSS篇/index.html">
 <meta property="og:site_name" content="Hadwz">
-<meta property="og:description" content="嗨，欢迎来到我的博客，让我们一起互相学习进步吧！">
-<meta property="og:updated_time" content="2017-10-16T17:23:29.739Z">
+<meta property="og:description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！） 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
+<meta property="og:updated_time" content="2018-04-07T11:03:24.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
-<meta name="twitter:description" content="嗨，欢迎来到我的博客，让我们一起互相学习进步吧！">
+<meta name="twitter:title" content="知识回顾-CSS篇">
+<meta name="twitter:description" content="摘要在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！） 所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。 以上">
   
     <link rel="alternative" href="/atom.xml" title="Hadwz" type="application/atom+xml">
   
@@ -145,27 +146,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hello" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-知识回顾-CSS篇" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello
+      知识回顾-CSS篇
     </h1>
   
 
         
-        <a href="/2017/10/04/Hello/" class="archive-article-date">
-  	<time datetime="2017-10-04T11:00:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-04</time>
+        <a href="/2018/04/03/知识回顾-CSS篇/" class="archive-article-date">
+  	<time datetime="2018-04-03T10:13:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>嗨，欢迎来到我的博客，让我们一起互相学习进步吧！</p>
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在发布上一篇之后，我感觉概念性的东西有些冗长，我就想着以后会出一个JS的技巧篇，那个的主要内容就全是代码了（talk is cheap, show me the code！）</p>
+<p>所以我想在这篇尽量减少概念性的东西，着重于实用技巧和实用问题方面，也就是所谓的技巧篇。</p>
+<p>以上<br><a id="more"></a></p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><ul>
+<li>IE盒模型：width = contentWidth（border+padding）+ margin</li>
+<li>W3C盒模型：width = contentWidth + padding + border + margin</li>
+</ul>
+<h3 id="rgba和opacity的区别"><a href="#rgba和opacity的区别" class="headerlink" title="rgba和opacity的区别"></a>rgba和opacity的区别</h3><ul>
+<li>rgba：只作用于元素的颜色和背景色</li>
+<li>opacity：作用于元素，以及元素内所有内容的透明度</li>
+</ul>
+<h3 id="link-和-import的区别"><a href="#link-和-import的区别" class="headerlink" title="link 和 @import的区别"></a>link 和 @import的区别</h3><ol>
+<li><p>从属关系的区别：</p>
+<p> @import是CSS提供的语法，只有导入CSS的作用，link是HTML提供的标签，不仅可以加载CSS，还可以定义RSS，rel连接属性等</p>
+</li>
+<li><p>加载顺序的区别：</p>
+<p> 加载页面时，link标签引入的CSS被同时加载，@import引入的将在页面加载完毕后加载</p>
+</li>
+<li><p>优先级的区别</p>
+<p> link引入的样式优先级大于@import引入的（存疑）</p>
+</li>
+</ol>
+<h3 id="Web安全色"><a href="#Web安全色" class="headerlink" title="Web安全色"></a>Web安全色</h3><p>安全色是指在不同的平台下显示效果一致的颜色，采用web安全色能保证在不同的平台上效果与预期一样，web安全色一共有216种</p>
+<h3 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h3><ol>
+<li>圆角边框：border-radius</li>
+<li>过渡：transition</li>
+<li>转换：transform（2d/3d）</li>
+<li>动画：animation：name，duration，timing || @keyframes name</li>
+<li>文本效果：text-shadow、word-wrap</li>
+<li>boxsizing：border-box</li>
+<li>盒子阴影：box-shadow</li>
+</ol>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><p>用display:table 是为了避免外边距margin重叠导致的margin塌陷,<br>内部元素默认会成为 table-cell 单元格的形式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">	<span class="attribute">content</span>:<span class="string">""</span>;</div><div class="line">	<span class="attribute">display</span>:table;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">	<span class="attribute">clear</span>:both;</div><div class="line">	<span class="attribute">overflow</span>:hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span>&#123;</div><div class="line">    <span class="attribute">zoom</span>:<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###　垂直居中</p>
+<h4 id="固定宽高的情况"><a href="#固定宽高的情况" class="headerlink" title="固定宽高的情况"></a>固定宽高的情况</h4><p>从本质上来讲，它将元素的左上角移到视窗中心点（值是元素宽和高的一半），使元素的中心点与视窗中心点重合<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">main</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="built_in">calc</span>(50%-3em); <span class="comment">/*margin-top:-3em*/</span></div><div class="line">	<span class="attribute">left</span>: <span class="built_in">calc</span>(50%-9em); <span class="comment">/*margin-left:-9em*/</span></div><div class="line">	<span class="attribute">height</span>: <span class="number">18em</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">6em</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="不定宽高的情况"><a href="#不定宽高的情况" class="headerlink" title="不定宽高的情况"></a>不定宽高的情况</h4><ol>
+<li><p>transform：通过transofrm中的translate使用百分比，让元素移动相对于自身宽度和高度的一半</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">main</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>flex</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">main</span> &#123;</div><div class="line">	<span class="attribute">display</span>: flex;</div><div class="line">	<span class="attribute">align-items</span>: center;</div><div class="line">	<span class="attribute">justify-content</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="画三角形"><a href="#画三角形" class="headerlink" title="画三角形"></a>画三角形</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">triangle</span>&#123;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">border</span>: solid <span class="number">5px</span> black;</div><div class="line">	<span class="attribute">border-color</span>: transparent transparent transparent black </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="画扇形"><a href="#画扇形" class="headerlink" title="画扇形"></a>画扇形</h3><p>思路跟三角形类似，只是多了一个圆角属性<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.sector</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">border-width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">border-style</span>: solid;</div><div class="line">	<span class="attribute">border-color</span>: <span class="number">#f00</span> transparent transparent;</div><div class="line">	<span class="attribute">border-radius</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="retina屏幕1px边框问题"><a href="#retina屏幕1px边框问题" class="headerlink" title="retina屏幕1px边框问题"></a>retina屏幕1px边框问题</h3><p>这里解决的，主要使用的是一个postcss-write-svg的插件，思路就是把边框用svg画出一个四边形，然后用border-image显示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/* sass的函数 */</span></div><div class="line">@<span class="keyword">svg</span> <span class="number">1px</span>Border &#123;</div><div class="line">  @<span class="keyword">rect</span> &#123;</div><div class="line">    <span class="selector-tag">fill</span>: <span class="selector-tag">var</span>(<span class="selector-tag">--color</span>,<span class="selector-tag">black</span>);</div><div class="line">    <span class="selector-tag">width</span>: 100%;</div><div class="line">    <span class="selector-tag">height</span>: 100%;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">	<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid transparent;</div><div class="line">	<span class="attribute">border-image</span>: <span class="built_in">svg</span>(1pxBorder params(--color #cac9c9)) <span class="number">2</span> <span class="number">2</span> stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="固定图片容器高度"><a href="#固定图片容器高度" class="headerlink" title="固定图片容器高度"></a>固定图片容器高度</h3><p>给图片提供一个容器，设置高度为0，根据宽度按照图片的比例使用padding-top得到一个高度值，如图片尺寸为200*100（则高度为宽度的二分之一）<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.img-wrap</span> &#123;</div><div class="line">	<span class="attribute">position</span>: relative;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">padding-top</span>: <span class="number">50%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.img</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="多行文本一处显示省略号"><a href="#多行文本一处显示省略号" class="headerlink" title="多行文本一处显示省略号"></a>多行文本一处显示省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.text</span> &#123;</div><div class="line">	<span class="attribute">overflow</span>:hidden;</div><div class="line">	<span class="attribute">text-overflow</span>:ellipsis; <span class="comment">/* 单行文本溢出显示省略号 */</span></div><div class="line">	<span class="attribute">display</span>:-webkit-box; <span class="comment">/* 弹性伸缩盒子模型显示 */</span></div><div class="line">	-webkit-line-clamp：2 /* 限制一个块元素显示文本行的行数 */</div><div class="line">	<span class="selector-tag">-webkit-box-orient</span>: <span class="selector-tag">vertical</span>; <span class="comment">/* 设置盒子对象子元素的排列方式 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="移动端兼容适配"><a href="#移动端兼容适配" class="headerlink" title="移动端兼容适配"></a>移动端兼容适配</h3><p><strong>VW兼容适配方案</strong></p>
+<p>补充：- 视窗（Viewport）指的就是浏览器可视化的区域，而这个可视区域是window.innerWidth/window.innerHeight</p>
+<p>vw就是指的视窗的宽度，vh指的是视窗高度</p>
+<ol>
+<li><p>在HTML文件下引入下面的JS文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- vw的兼容脚本 Viewport Units Buggyfill --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 并在文件中调用对应的方法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"> </span></div><div class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;                </span></div><div class="line"><span class="javascript">     <span class="built_in">window</span>.viewportUnitsBuggyfill.init(&#123; <span class="attr">hacks</span>: <span class="built_in">window</span>.viewportUnitsBuggyfillHacks </span></div><div class="line"><span class="undefined">    &#125;); &#125; </span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在head中添加meta标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 为了兼容ipone X的适配，在meta标签中添加了viewport-fit=cover参数处理 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">viewport</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>添加PostCss插件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//将px转换为对应的vw</span></div><div class="line"><span class="number">1</span> = postcss-px-to-viewport</div><div class="line"></div><div class="line"><span class="string">"postcss-px-to-viewport"</span>: &#123; </div><div class="line">	viewportWidth: <span class="number">750</span>, <span class="comment">// 视窗的宽度，对应的是我们设计稿的宽度，一般是750 </span></div><div class="line">	viewportHeight: <span class="number">1334</span>, <span class="comment">// 视窗的高度，根据750设备的宽度来指定，一般指定1334，也可以不配置 </span></div><div class="line">	unitPrecision: <span class="number">3</span>, <span class="comment">// 指定`px`转换为视窗单位值的小数位数（很多时候无法整除） </span></div><div class="line">	viewportUnit: <span class="string">'vw'</span>, <span class="comment">// 指定需要转换成的视窗单位，建议使用vw </span></div><div class="line">	selectorBlackList: [<span class="string">'.ignore'</span>, <span class="string">'.hairlines'</span>], <span class="comment">// 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名 minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值 mediaQuery: false // 允许在媒体查询中转换`px` &#125;</span></div><div class="line"></div><div class="line"><span class="comment">//自动处理content内容</span></div><div class="line"><span class="number">2</span> = postcss-viewport-units</div></pre></td></tr></table></figure>
+</li>
+<li><p>postcss-px-to-viewport 和 postcss-viewport-units两个插件会对::before ::fater img中的content进行覆盖，如果有用到content要用!important进行覆处理覆盖</p>
+</li>
+</ol>
 
       
 
@@ -174,6 +240,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识回顾</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -224,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http:Hadwz.me/2017/10/04/Hello/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:Hadwz.me/2018/04/03/知识回顾-CSS篇/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -238,15 +315,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/05/Hexo-博客建立心得/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo 博客建立心得
-        
-      </div>
-    </a>
   
+    <a href="/2018/04/02/知识回顾-Javascript篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">知识回顾-Javascript篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
